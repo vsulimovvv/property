@@ -1,0 +1,61 @@
+.socials {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: block;
+    background-color: var(--color-white);
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    position: relative;
+    transition: 150ms ease;
+
+    &:hover {
+      background-color: var(--color-accent);
+      &::after {
+        background-color: var(--color-white);
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #969da4;
+      transition: 150ms ease;
+    }
+
+    &--instagram {
+      &::after {
+        @include maskImage(url('../images/icons/instagram.svg'), contain);
+      }
+    }
+    &--vk {
+      &::after {
+        @include maskImage(url('../images/icons/vk.svg'), contain);
+      }
+    }
+    &--viber {
+      &::after {
+        @include maskImage(url('../images/icons/viber.svg'), contain);
+      }
+    }
+    &--telegram {
+      &::after {
+        @include maskImage(url('../images/icons/telegram.svg'), contain);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/breadcrumbs';
+@import './components/accordion';
+@import './components/popups';
+@import './components/socials';
+@import './components/swiper-options';
+@import './components/custom-checkbox';
+@import './components/custom-select';
+@import './components/menu';
+@import './components/menu-mobile';
+@import './components/form-submit';
+@import './components/form-filter';
+
+// * ===== Card Components
+@import './components/card-team';
+@import './components/card-articles';
+@import './components/card-object';
+
+// * ===== Section Components
+@import './components/footer';
+@import './components/header';
+@import './components/hero';
+@import './components/contacts';
+@import './components/work';
+@import './components/request';
+@import './components/benefits';
+@import './components/worth';
+@import './components/about';
+@import './components/team';
+@import './components/docs';
+@import './components/advantages';
+@import './components/algorithm';
+@import './components/articles';
+@import './components/article';
+@import './components/similar-articles';
+@import './components/faqs';
+@import './components/product';
+@import './components/similar-objects';
+@import './components/objects';
+@import './components/objects-map';

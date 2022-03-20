@@ -1,0 +1,301 @@
+.product {
+  @include adaptive-value('padding-top', 40, 30, 1);
+  @include adaptive-value('padding-bottom', 65, 40, 1);
+
+  &__title {
+    @include adaptive-value('font-size', 30, 22, 1);
+    @include adaptive-value('margin-bottom', 15, 10, 1);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+    @include adaptive-value('gap', 30, 20, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 15px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      margin-left: 0;
+      flex-shrink: initial;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #67676a;
+  }
+
+  &__price {
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 900;
+    color: #32313e;
+    @include adaptive-value('font-size', 30, 22, 1);
+
+    small {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__btn {
+    padding: 15px 30px;
+    @include adaptive-value('font-size', 18, 15, 1);
+
+    @include breakpointsMaxW($bp-container) {
+      padding: 15px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      order: 1;
+    }
+  }
+
+  &__notify {
+    font-size: 14px;
+  }
+
+  &__map {
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+    @include adaptive-value('height', 350, 250, 1);
+  }
+
+  &__text {
+    p:not(:last-child) {
+      @include adaptive-value('margin-bottom', 30, 20, 1);
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    gap: 60px;
+    @include adaptive-value('margin-bottom', 70, 40, 1);
+    min-height: 545px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr 0.4fr;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__wrapper {
+    min-width: 0;
+  }
+
+  &__slider {
+    min-width: 0;
+    height: 100%;
+    max-height: 545px;
+    max-width: 920px;
+    width: 100%;
+  }
+
+  .slider-thumbs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    gap: 15px;
+    height: 100%;
+    min-width: 0;
+    position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+
+    &__main {
+      max-width: 100%;
+      height: 100%;
+      min-width: 0;
+
+      @include breakpointsMaxW($bp-991) {
+        order: -1;
+        max-width: 100%;
+      }
+
+      .swiper-slide {
+        border-radius: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          @include img(cover);
+          border-radius: 10px;
+        }
+      }
+    }
+
+    &__nav {
+      flex-shrink: 0;
+      width: 95px;
+      height: 465px;
+      min-width: 0;
+
+      @include breakpointsMaxW($bp-991) {
+        max-width: 300px;
+        width: 100%;
+        height: 65px;
+        height: calc(40px + (65 - 40) * ((100vw - 375px) / (768 - 375)));
+      }
+
+      .swiper-slide {
+        cursor: pointer;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 2px);
+        height: 65px;
+        border-radius: 10px;
+
+        @include breakpointsMaxW($bp-991) {
+          height: 100%;
+          width: calc(60px + (87 - 60) * ((100vw - 375px) / (768 - 375)));
+        }
+
+        img {
+          @include img(cover);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    .info-box {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 35, 25, 1);
+      }
+
+      &__heading {
+        font-size: 18px;
+        font-weight: 700;
+        color: #282828;
+        @include adaptive-value('margin-bottom', 20, 12, 1);
+      }
+
+      &__item {
+        position: relative;
+        padding-left: 25px;
+
+        &:not(:last-child) {
+          @include adaptive-value('margin-bottom', 13, 7, 1);
+        }
+
+        &::after {
+          @include elDef();
+          width: 15px;
+          height: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          background-color: #8d9198;
+        }
+
+        &--pet {
+          &::after {
+            @include maskImage(url('../images/icons/pet.svg'), contain);
+          }
+        }
+        &--baby {
+          &::after {
+            @include maskImage(url('../images/icons/baby.svg'), contain);
+          }
+        }
+        &--fridge {
+          &::after {
+            @include maskImage(url('../images/icons/fridge.svg'), contain);
+          }
+        }
+        &--dishwasher {
+          &::after {
+            @include maskImage(url('../images/icons/dishwasher.svg'), contain);
+          }
+        }
+        &--washing-machine {
+          &::after {
+            @include maskImage(
+              url('../images/icons/washing-machine.svg'),
+              contain
+            );
+          }
+        }
+        &--wardrobe {
+          &::after {
+            @include maskImage(url('../images/icons/wardrobe.svg'), contain);
+          }
+        }
+        &--kitchen {
+          &::after {
+            @include maskImage(url('../images/icons/kitchen.svg'), contain);
+          }
+        }
+        &--ac {
+          &::after {
+            @include maskImage(url('../images/icons/ac.svg'), contain);
+          }
+        }
+        &--tv {
+          &::after {
+            @include maskImage(url('../images/icons/tv.svg'), contain);
+          }
+        }
+        &--wifi {
+          &::after {
+            @include maskImage(url('../images/icons/wifi.svg'), contain);
+          }
+        }
+        &--shower {
+          &::after {
+            @include maskImage(url('../images/icons/shower.svg'), contain);
+          }
+        }
+      }
+    }
+  }
+}

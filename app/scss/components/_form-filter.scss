@@ -1,0 +1,43 @@
+.form-filter {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #40434c;
+    margin-bottom: 20px;
+  }
+
+  &__groups {
+    display: grid;
+    gap: 15px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+
+    &--reset {
+      background-color: transparent;
+      color: var(--color-accent);
+      border: none;
+      border-bottom: 1px solid transparent;
+      border-radius: 0;
+
+      &:hover {
+        border-bottom-color: var(--color-accent);
+      }
+    }
+  }
+}

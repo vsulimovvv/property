@@ -1,0 +1,85 @@
+.contacts {
+  @include adaptive-value('padding-top', 40, 20, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+  color: #282828;
+  font-size: 15px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 270px) 1fr;
+    gap: 75px;
+    min-height: 485px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__phone {
+    @include adaptive-value('font-size', 35, 25, 1);
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+    font-weight: 300;
+    color: #282828;
+  }
+
+  &__btn {
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 20px;
+  }
+
+  &__info {
+    display: grid;
+    @include adaptive-value('gap', 30, 20, 1);
+  }
+
+  &__address,
+  &__mail,
+  &__schedule {
+    padding-left: 25px;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 13px;
+      height: 15px;
+      top: 0;
+      left: 0;
+      transform: translateY(50%);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__address {
+    &::after {
+      @include maskImage(url('../images/icons/location.svg'), contain);
+    }
+  }
+
+  &__mail {
+    &::after {
+      @include maskImage(url('../images/icons/mail.svg'), contain);
+    }
+  }
+
+  &__schedule {
+    &::after {
+      @include maskImage(url('../images/icons/clock-2.svg'), contain);
+    }
+  }
+}

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Arend Apartment</title>
+  </head>
+
+  <body>
+    <div class="popup popup--service">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="service-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="service-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--product">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказ насоса ДГН СЕРИЯ</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="product-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="product-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--consultation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказать консультацию</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="consultation-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="consultation-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <h1 class="visually-hidden">Контакты</h1>
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Наши объекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"
+                  >Курсы посуточной аренды</a
+                >
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"
+                  >Управление посуточной арендой</a
+                >
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Подбор помещения для посуточной аренды
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"
+                  >Плохие отзывы от гостей</a
+                >
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Как сдавать апартаменты или квартиру посуточно официально
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Через какие сервисы сдавать квартиру посуточно
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Как выбрать постельное белье для посуточной сдачи?
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Сдача квартиры через агентство
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Сейфы для ключей</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"
+                  >Как принимать квартиру после проживания?</a
+                >
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Кражи в посуточных квартирах</a
+                >
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Как сдавать квартиру посуточно самому?</a
+                >
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"> в управление</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Статьи</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Вопрос</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О нас</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="header__wrapper wrapper-nav">
+      <a class="wrapper-nav__logo logo" href="index.html">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <nav class="wrapper-nav__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши объекты</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Услуги</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Курсы посуточной аренды</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Управление посуточной арендой</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Подбор помещения для посуточной аренды</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Плохие отзывы от гостей</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Как сдавать апартаменты или квартиру посуточно
+                    официально</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Через какие сервисы сдавать квартиру посуточно</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Как выбрать постельное белье для посуточной сдачи?</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Сдача квартиры через агентство</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Сейфы для ключей</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Как принимать квартиру после проживания?</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Кражи в посуточных квартирах</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Как сдавать квартиру посуточно самому?</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">в управление</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Вопрос</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="wrapper-nav__tools">
+        <a class="wrapper-nav__phone" href="tel:+79650002690">
+          <span class="wrapper-nav__phone-icon"></span>
+          <span class="wrapper-nav__phone-text">8 (965) 000 26 90</span>
+        </a>
+        <button class="wrapper-nav__btn btn btn--light" type="button">
+          Заказать звонок
+        </button>
+      </div>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link">Статьи</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main"><section class="articles">
+  <div class="container">
+    <div class="articles__top">
+      <h2 class="articles__title section-title">Статьи</h2>
+
+      <div class="articles__sort">
+        <span>Сортировать: </span>
+        <button class="articles__button articles__button--active" type="button">
+          По умолчанию
+        </button>
+        <button class="articles__button" type="button">
+          По дате публикации
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="articles__wrapper">
+    <div class="container">
+      <div class="articles__content">
+        <div class="articles__side side">
+          <h3 class="side__title">Оглавление</h3>
+          <ul class="side__list">
+            <li class="side__item">
+              <a class="side__link" href="#">Курсы посуточной аренды</a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">Управление посуточной арендой</a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#"
+                >Подбор помещения для посуточной аренды</a
+              >
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">Плохие отзывы от гостей</a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#"
+                >Как сдавать апартаменты или квартиру посуточно официально</a
+              >
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#"
+                >Через какие сервисы сдавать квартиру посуточно</a
+              >
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#"
+                >Как выбрать постельное белье для посуточной сдачи?</a
+              >
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">Сдача квартиры через агентство</a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">Сейфы для ключей</a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">
+                Как принимать квартиру после проживания?
+              </a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">Кражи в посуточных квартирах</a>
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#"
+                >Как сдавать квартиру посуточно самому?</a
+              >
+            </li>
+            <li class="side__item">
+              <a class="side__link" href="#">в управление</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="side-mobile accordion">
+          <button class="side-mobile__top accordion__control" type="button">
+            Оглавление
+          </button>
+          <div class="side-mobile__content accordion__content">
+            <ul class="side-mobile__list">
+              <li class="side-mobile__item">
+                <a class="side-mobile__link" href="#">
+                  Курсы посуточной аренды</a
+                >
+              </li>
+              <li class="side-mobile__item">
+                <a class="side-mobile__link" href="#">Сейфы для ключей</a>
+              </li>
+              <li class="side-mobile__item">
+                <a class="side-mobile__link" href="#"
+                  >Как принимать квартиру после проживания?</a
+                >
+              </li>
+              <li class="side-mobile__item">
+                <a class="side-mobile__link" href="#"
+                  >Кражи в посуточных квартирах</a
+                >
+              </li>
+              <li class="side-mobile__item">
+                <a class="side-mobile__link" href="#"
+                  >Как сдавать квартиру посуточно самому?</a
+                >
+              </li>
+              <li class="side-mobile__item">
+                <a class="side-mobile__link" href="#">в управление</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="articles__right">
+          <ul class="articles__list">
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/1.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">
+                    <span>19.02.2022</span> | <span>15:00</span>
+                  </div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Курсы посуточной аренды</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/2.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">
+                    <span>19.02.2022</span> | <span>15:00</span>
+                  </div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Управление посуточной арендой</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/3.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Подбор помещения для посуточной аренды</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/4.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#"
+                      >Как сдавать апартаменты или квартиру посуточно
+                      официально</a
+                    >
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/5.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Плохие отзывы от гостей</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/6.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#"
+                      >Через какие сервисы сдавать квартиру посуточно</a
+                    >
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/1.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">
+                    <span>19.02.2022</span> | <span>15:00</span>
+                  </div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Курсы посуточной аренды</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/2.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">
+                    <span>19.02.2022</span> | <span>15:00</span>
+                  </div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Управление посуточной арендой</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/3.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Подбор помещения для посуточной аренды</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/4.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#"
+                      >Как сдавать апартаменты или квартиру посуточно
+                      официально</a
+                    >
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/5.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#">Плохие отзывы от гостей</a>
+                  </h3>
+                </div>
+              </article>
+            </li>
+            <li class="articles__item">
+              <article class="articles-card">
+                <div class="articles-card__img">
+                  <img
+                    src="images/content/articles/6.jpg"
+                    alt="Курсы посуточной аренды"
+                  />
+                </div>
+                <div class="articles-card__info">
+                  <div class="articles-card__time">19.02.2022 | 15:00</div>
+                  <h3 class="articles-card__title">
+                    <a href="#"
+                      >Через какие сервисы сдавать квартиру посуточно</a
+                    >
+                  </h3>
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <div class="articles__pagination pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--active" href="#"
+                  >1</a
+                >
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">4</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">5</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--further" href="#"
+                  >Далее</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper wrapper-nav">
+      <a class="wrapper-nav__logo logo" href="index.html">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <nav class="wrapper-nav__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши объекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Мини-отели</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Вопрос</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="wrapper-nav__tools">
+        <a class="wrapper-nav__phone" href="tel:+79650002690">
+          <span class="wrapper-nav__phone-icon"></span>
+          <span class="wrapper-nav__phone-text">8 (965) 000 26 90</span>
+        </a>
+        <button class="wrapper-nav__btn btn btn--light" type="button">
+          Заказать звонок
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__middle">
+    <div class="container">
+      <div class="footer__middle-inner">
+        <div class="footer__info">
+          <address class="footer__block">
+            <span class="footer__name"> Юр. адрес: </span>
+            <span class="footer__text">
+              Санкт-Петербург, ул. Название улицы 10, офис 11
+            </span>
+          </address>
+          <div class="footer__block">
+            <span class="footer__name">ИНН</span>
+            <span class="footer__text"> 1234567890 </span>
+          </div>
+          <a class="footer__block" href="mailto:info@real-apartaments.com">
+            <span class="footer__name">E-mail</span>
+            <span class="footer__text">info@real-apartaments.com</span>
+          </a>
+          <div class="footer__block">
+            <span class="footer__name">Режим работы</span>
+            <span class="footer__text">пн - пт с 09:00 до 19:00</span>
+          </div>
+        </div>
+
+        <div class="footer__actions">
+          <div class="footer__btns">
+            <a class="footer__btn btn btn--white footer__btn--docs" href="#">
+              Документы
+            </a>
+            <a class="footer__btn btn btn--white" href="#">
+              Запросить договор
+            </a>
+          </div>
+
+          <div class="socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--viber" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--telegram" href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <p class="footer__copy"> Copyright © 2022 Все права защищены.</p>
+        <a class="footer__policy" href="#"> Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- wNumb -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+
+<!-- MixItUp -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

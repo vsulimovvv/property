@@ -1,0 +1,145 @@
+.benefits {
+  &__title {
+    font-size: 30px;
+    max-width: 510px;
+    text-align: center;
+    margin: 0 auto;
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+    line-height: 1.4;
+  }
+
+  &__wrapper {
+    @include breakpointsMaxW($bp-768) {
+      overflow-x: auto;
+    }
+  }
+
+  &__content {
+    @include breakpointsMaxW($bp-768) {
+      width: 800px;
+      overflow-x: auto;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr;
+  }
+
+  &__row {
+    &--top {
+      text-align: center;
+
+      .benefits__item {
+        background-color: #e9e9e9;
+        height: 46px;
+        padding: 15px;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+
+        &:nth-child(1) {
+          border-radius: 10px 0 0 0;
+        }
+        &:nth-child(3) {
+          border-radius: 0 10px 0 0;
+          font-size: 15px;
+          font-weight: 400;
+          color: #5a616c;
+        }
+
+        &:nth-child(2) {
+          font-weight: 700;
+          height: 80px;
+          border-radius: 20px 20px 0px 0px;
+          text-transform: uppercase;
+          background-color: var(--color-accent);
+          color: var(--color-white);
+        }
+      }
+    }
+
+    &--bottom {
+      .benefits__item {
+        background-color: #414d61;
+        border: none;
+        border-radius: 0px 0px 0px 20px;
+        color: var(--color-white);
+        font-weight: 400;
+        text-align: center;
+
+        &:nth-child(1) {
+          height: 185px;
+        }
+        &:nth-child(3) {
+          height: 210px;
+          border-radius: 0px 0px 20px 0;
+        }
+
+        &:nth-child(2) {
+          height: 210px;
+          background-color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+
+    &::before {
+      @include elDef();
+      height: 1px;
+      background-color: #e9e9e9;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    text-align: center;
+
+    @include adaptive-value('padding', 25, 10, 1);
+
+    &--check,
+    &--uncheck {
+      padding-top: 60px;
+      position: relative;
+      &::after {
+        @include elDef();
+        width: 26px;
+        height: 26px;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--check {
+      border-right: 5px solid var(--color-accent);
+      border-left: 5px solid var(--color-accent);
+
+      &::after {
+        @include backgroundImage(
+          url('../images/content/check-bg.png'),
+          contain
+        );
+      }
+    }
+
+    &--uncheck {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/check-unactive.png'),
+          contain
+        );
+      }
+    }
+  }
+}

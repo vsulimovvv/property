@@ -1,0 +1,134 @@
+.work {
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    grid-column: 3 span;
+    border-radius: 20px;
+    min-height: 270px;
+    height: 100%;
+    font-size: 17px;
+    color: #4c525d;
+    position: relative;
+    @include adaptive-value('padding-left', 40, 10, 1);
+    @include adaptive-value('padding-right', 40, 10, 1);
+    @include adaptive-value('padding-bottom', 40, 10, 1);
+    @include adaptive-value('font-size', 17, 15, 1);
+    padding-top: 155px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-column: initial;
+    }
+
+    &::after {
+      @include elDef();
+      top: 35px;
+
+      @include adaptive-value('left', 40, 20, 1);
+      @include adaptive-value('width', 100, 60, 1);
+      @include adaptive-value('height', 100, 60, 1);
+    }
+
+    &--control-payment,
+    &--control-property,
+    &--control-help {
+      grid-column: 4 span;
+
+      @include breakpointsMaxW($bp-991) {
+        grid-column: initial;
+      }
+    }
+
+    &--promote {
+      background-color: #fff3f6;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/1.png'),
+          contain
+        );
+      }
+    }
+
+    &--move {
+      background-color: #f6f9ff;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/2.png'),
+          contain
+        );
+      }
+    }
+
+    &--make {
+      background-color: #fff3fe;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/3.png'),
+          contain
+        );
+      }
+    }
+    &--organize {
+      background-color: #f8f8f8;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/4.png'),
+          contain
+        );
+      }
+    }
+
+    &--control-payment {
+      background-color: #f8f8f8;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/5.png'),
+          contain
+        );
+      }
+    }
+    &--control-property {
+      background-color: #fff5e2;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/6.png'),
+          contain
+        );
+      }
+    }
+    &--help {
+      background-color: #f6fffd;
+      &::after {
+        @include backgroundImage(
+          url('../images/content/work/7.png'),
+          contain
+        );
+      }
+    }
+  }
+}

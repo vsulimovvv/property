@@ -1,0 +1,427 @@
+<section class="objects">
+  <div class="container">
+    <div class="objects__top">
+      <h2 class="objects__title section-title">Квартиры / апартаменты</h2>
+
+      <div class="objects__actions">
+        Сортировать:
+        <div class="objects__buttons">
+          <button class="objects__button objects__button--active" type="button">
+            По умолчанию
+          </button>
+          <button class="objects__button" type="button">Сначала дороже</button>
+          <button class="objects__button" type="button">Сначала дешевле</button>
+          <button class="objects__button" type="button">Дата обновления</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="objects__content">
+      <div class="objects__filters filters">
+        <form class="filters__form form-filter">
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Недвижимость</h3>
+
+            <div class="form-filter__groups">
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" checked />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Квартиры / апартаменты</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Студии</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Мини-отели</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Срок аренды</h3>
+
+            <div class="form-filters__groups">
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" checked />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Длительная аренда</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Посуточная аренда</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Количество комнат</h3>
+
+            <div class="form-filter__inner">
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" checked />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">1-комнатная</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">2-комнатная</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">3-комнатная</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">4-комнатная</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Цена</h3>
+            <div class="range-slider">
+              <div class="range-slider__range" id="slider-handles"></div>
+              <div class="range-slider__values">
+                <span class="range-slider__min">руб</span>
+                <span class="range-slider__max"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Район</h3>
+
+            <div class="form-filter__group">
+              <select class="select" name="" id="">
+                <option value="Укажите район">Укажите район</option>
+                <option value="Укажите район">Укажите район</option>
+                <option value="Укажите район">Укажите район</option>
+                <option value="Укажите район">Укажите район</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Метро</h3>
+
+            <div class="form-filter__group">
+              <select class="select" name="" id="">
+                <option value="Укажите район">Укажите район</option>
+                <option value="Укажите район">Укажите район</option>
+                <option value="Укажите район">Укажите район</option>
+                <option value="Укажите район">Укажите район</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <h3 class="form-filter__heading">Срок аренды</h3>
+
+            <div class="form-filter__groups">
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Любой</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Евроремонт</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Косметический</span>
+                </label>
+              </div>
+              <div class="form-filter__group">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Дизайнерский</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-filter__box">
+            <button class="form-filter__btn btn" type="submit">
+              Подобрать
+            </button>
+            <button
+              class="form-filter__btn btn form-filter__btn--reset"
+              type="reset"
+            >
+              Сбросить фильтр
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="objects__right">
+        <button
+          class="objects__filter-btn"
+          type="button"
+          aria-label="Показать фильтры"
+        >
+          <svg width="30" height="30">
+            <use xlink:href="images/sprite.svg#filter"></use>
+          </svg>
+        </button>
+
+        <ul class="objects__list">
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/2.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/1.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/3.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3</a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/2.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/1.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/3.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3</a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/2.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/1.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/3.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3</a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/2.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/1.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3 </a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="objects__item">
+            <article class="object-card">
+              <div class="object-card__img">
+                <img src="images/content/objects/3.jpg" alt="Наш объект" />
+              </div>
+              <div class="object-card__info">
+                <h3 class="object-card__title">
+                  <a href="#">Петергофское шоссе 59, квартира 3</a>
+                </h3>
+                <p class="object-card__type">1 - комнатные апартаменты</p>
+                <div class="object-card__price">
+                  от 2 000 Р<small>/сутки</small>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="objects__pagination pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--active" href="#"
+                >1</a
+              >
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">4</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">5</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--further" href="#"
+                >Далее</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,243 @@
+.algorithm {
+  @include adaptive-value('padding-top', 30, 20, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 20, 10, 1);
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+
+  &__heading {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    font-size: 15px;
+    color: #7d838e;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptive-value('gap', 35, 25, 1);
+    counter-reset: number;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    justify-self: center;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 305px;
+    height: 100%;
+    border: 4px solid #ebf0f9;
+    border-radius: 20px;
+    transition: 150ms ease;
+    padding: 50px;
+    padding-top: 145px;
+    counter-reset: number;
+
+    @include adaptive-value('padding', 50, 20, 1);
+    @include adaptive-value('padding-top', 145, 125, 1);
+
+    &:hover {
+      border-color: var(--color-accent);
+
+      @include breakpointsMinW($bp-991) {
+        transform: scale(1.02);
+      }
+    }
+
+    &::after {
+      @include elDef();
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include adaptive-value('width', 70, 50, 1);
+      @include adaptive-value('height', 70, 50, 1);
+      @include adaptive-value('top', 50, 20, 1);
+    }
+
+    &::before {
+      position: absolute;
+      counter-increment: number;
+      content: counter(number);
+      border-radius: 50%;
+      background-color: #ebf0f9;
+      top: 20px;
+      left: 20px;
+      color: var(--color-dark);
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #34383f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include adaptive-value('width', 50, 30, 1);
+      @include adaptive-value('height', 50, 30, 1);
+      @include adaptive-value('top', 20, 10, 1);
+      @include adaptive-value('left', 20, 10, 1);
+    }
+
+    &--photography {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/camera.png'),
+          contain
+        );
+      }
+    }
+
+    &--commercial,
+    &--promotion {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/commercial.png'),
+          contain
+        );
+      }
+    }
+    &--reception {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/reception.png'),
+          contain
+        );
+      }
+    }
+    &--payment {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/payment.png'),
+          contain
+        );
+      }
+    }
+    &--deposit {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/deposit.png'),
+          contain
+        );
+      }
+    }
+    &--check {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/check.png'),
+          contain
+        );
+      }
+    }
+    &--cleaning {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/cleaning.png'),
+          contain
+        );
+      }
+    }
+    &--refund {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/refund.png'),
+          contain
+        );
+      }
+    }
+    &--repair {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/repair.png'),
+          contain
+        );
+      }
+    }
+    &--counters {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/counters.png'),
+          contain
+        );
+      }
+    }
+    &--payment-bills {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/payment-bills.png'),
+          contain
+        );
+      }
+    }
+    &--reporting {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/reporting.png'),
+          contain
+        );
+      }
+    }
+    &--management-model {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/management-model.png'),
+          contain
+        );
+      }
+    }
+    &--tariffs {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/tariffs.png'),
+          contain
+        );
+      }
+    }
+    &--management {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/management.png'),
+          contain
+        );
+      }
+    }
+    &--loyalty {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/loyalty.png'),
+          contain
+        );
+      }
+    }
+    &--reporting {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/algorithm/reporting.png'),
+          contain
+        );
+      }
+    }
+  }
+}

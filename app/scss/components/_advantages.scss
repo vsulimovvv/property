@@ -1,0 +1,111 @@
+.advantages {
+  @include adaptive-value('padding-bottom', 30, 20, 1);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    gap: 35px;
+    @include adaptive-value('gap', 35, 25, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 400px));
+      justify-content: center;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: minmax(auto, 400px);
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.advantages-card {
+  font-size: 15px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px 40px;
+  height: 100%;
+
+  &--experience {
+    .advantages-card__top {
+      &::after {
+        @include maskImage(url('../images/content/advantages/1.svg'), contain);
+      }
+    }
+  }
+
+  &--profit {
+    .advantages-card__top {
+      &::after {
+        @include maskImage(url('../images/content/advantages/2.svg'), contain);
+      }
+    }
+  }
+
+  &--guarantee {
+    .advantages-card__top {
+      &::after {
+        @include maskImage(url('../images/content/advantages/3.svg'), contain);
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    border-bottom: 1px solid #dedede;
+    padding: 25px 0;
+
+    @include adaptive-value('padding-left', 65, 55, 1);
+
+    &::after {
+      @include elDef();
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #34383f;
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    color: #7d838e;
+    line-height: 1.2;
+  }
+
+  &__list {
+    color: #484e57;
+    padding: 25px 0;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 12px;
+
+    &::after {
+      @include elDef();
+      width: 6px;
+      height: 6px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-dark);
+      border-radius: 50%;
+    }
+  }
+}

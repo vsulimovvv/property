@@ -1,0 +1,19 @@
+.request {
+  @include adaptive-value('padding-top', 80, 50, 1);
+  @include adaptive-value('padding-bottom', 100, 70, 1);
+  @include background(cover);
+
+  &__wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title{
+    @include adaptive-value('margin-bottom', 35, 20, 1);
+  }
+
+  &__top {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+}

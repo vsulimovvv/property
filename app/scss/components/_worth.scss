@@ -1,0 +1,171 @@
+.worth {
+  padding-top: 70px;
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__title {
+    @include adaptive-value('font-size', 35, 25, 1);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 370px minmax(auto, 740px);
+    justify-content: space-between;
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 740px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 310px;
+    width: 100%;
+    padding-left: 130px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding-left: 110px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+    }
+
+    &--duration {
+      .worth__icon {
+        &::after {
+          @include maskImage(url('../images/icons/calendar.svg'), contain);
+        }
+      }
+    }
+
+    &--daily {
+      .worth__icon {
+        &::after {
+          @include maskImage(url('../images/icons/clock.svg'), contain);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #f1f5fb;
+    border-radius: 50%;
+
+    @include breakpointsMaxW($bp-container) {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      height: calc(70px + (90 - 70) * ((100vw - 375px) / (991 - 375)));
+      width: calc(70px + (90 - 70) * ((100vw - 375px) / (991 - 375)));
+    }
+
+    &::after {
+      @include elDef();
+      width: 41px;
+      height: 41px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-accent);
+
+      @include breakpointsMaxW($bp-991) {
+        height: calc(30px + (41 - 30) * ((100vw - 375px) / (991 - 375)));
+        width: calc(30px + (41 - 30) * ((100vw - 375px) / (991 - 375)));
+      }
+    }
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+
+    span {
+      font-weight: 500;
+      display: block;
+    }
+  }
+
+  &__number {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    @include adaptive-value('font-size', 80, 40, 1);
+  }
+
+  &--row {
+    .worth {
+      &__wrapper {
+        grid-template-columns: 1fr;
+        position: relative;
+
+        @include breakpointsMaxW($bp-991) {
+          &::after,
+          &::before {
+            display: none;
+          }
+        }
+
+        &::after {
+          @include elDef();
+          width: 177px;
+          height: 177px;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include backgroundImage(
+            url('../images/content/wallet.png'),
+            contain
+          );
+        }
+
+        &::before {
+          @include elDef();
+          width: 223px;
+          height: 143px;
+          right: 20px;
+          top: 45%;
+          @include backgroundImage(
+            url('../images/content/mosaic.png'),
+            contain
+          );
+        }
+      }
+
+      &__text {
+        max-width: 600px;
+        font-size: 18px;
+
+        @include breakpointsMaxW($bp-991) {
+          max-width: 100%;
+        }
+        
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

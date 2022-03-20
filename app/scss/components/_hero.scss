@@ -1,0 +1,102 @@
+.hero {
+  @include background(cover);
+
+  &__wrapper {
+    padding: 130px 0 180px;
+    @include adaptive-value('padding-top', 130, 60, 1);
+    @include adaptive-value('padding-bottom', 180, 80, 1);
+    position: relative;
+  }
+
+  &__arrow-down {
+    width: 41px;
+    height: 41px;
+    background-color: var(--color-white);
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+
+    &::after {
+      @include elDef();
+      width: 7px;
+      height: 75px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include backgroundImage(url('../images/long-arrow.png'), contain);
+    }
+  }
+
+  &__offer {
+    max-width: 580px;
+  }
+
+  &__title {
+    @include adaptive-value('font-size', 35, 26, 1);
+    font-weight: 700;
+    color: var(--color-dark);
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 45, 25, 1);
+    max-width: 365px;
+
+    @include breakpointsMaxW($bp-768) {
+      font-size: 15px;
+    }
+  }
+
+  &__btn {
+    @include adaptive-value('font-size', 17, 15, 1);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &--apartments {
+    .hero {
+      &__offer {
+        max-width: 620px;
+      }
+
+      &__title {
+        @include adaptive-value('font-size', 35, 25, 1);
+        span {
+          display: block;
+          color: inherit;
+        }
+      }
+
+      &__text {
+        max-width: 100%;
+      }
+
+      &__btn {
+        font-size: 15px;
+      }
+    }
+    
+  }
+
+  &--mini-hotels {
+    .hero {
+      &__offer {
+        max-width: 650px;
+      }
+      &__text {
+        max-width: 100%;
+      }
+    }
+  }
+}

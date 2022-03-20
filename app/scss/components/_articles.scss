@@ -1,0 +1,114 @@
+.articles {
+  @include adaptive-value('padding-top', 40, 20, 1);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__side {
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__sort {
+    font-size: 14px;
+    color: #40434c;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include breakpointsMaxW($bp-576) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__button {
+    font-weight: 400;
+    color: #9497a1;
+
+    &:hover,
+    &--active {
+      color: #377ef9;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      @include elDef();
+      width: 20%;
+      height: 100%;
+      background-color: #f7f7f7;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      @include breakpointsMinW(1920px) {
+        width: 26%;
+      }
+      @include breakpointsMinW(2400px) {
+        display: none;
+      }
+
+      @include breakpointsMaxW(1600px) {
+        width: 10%;
+      }
+
+      @include breakpointsMaxW($bp-991) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 0.23fr 1fr;
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 325px));
+    @include adaptive-value('margin-bottom', 70, 40, 1);
+    @include adaptive-value('column-gap', 23, 15, 1);
+    @include adaptive-value('row-gap', 50, 30, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, minmax(auto, 325px));
+      justify-content: center;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: minmax(auto, 325px);
+    }
+  }
+
+  &__item {
+    height: 100%;
+    justify-self: center;
+    width: 100%;
+  }
+
+  &__pagination {
+    @include adaptive-value('margin-bottom', 70, 40, 1);
+  }
+}
