@@ -62,12 +62,13 @@
     gap: 35px;
 
     @include breakpointsMaxW($bp-container) {
-      gap: calc(10px + (35 - 10) * ((100vw - 991px) / (1270 - 991)));
+      gap: calc(10px + (35 - 10) * ((100vw - 991px) / (1300 - 991)));
     }
 
     @include breakpointsMaxW($bp-991) {
       gap: 30px;
     }
+
     @include breakpointsMaxW($bp-768) {
       grid-template-columns: repeat(2, auto);
     }
@@ -84,8 +85,12 @@
     align-items: flex-start;
     font-size: 12px;
     line-height: 20px;
+
     @include breakpointsMaxW($bp-container) {
-      font-size: 11px;
+      font-size: calc(10px + (12 - 10) * ((100vw - 991px) / (1300 - 991)));
+    }
+    @include breakpointsMaxW($bp-991) {
+      font-size: 12px;
     }
   }
 
@@ -128,6 +133,7 @@
 
     @include breakpointsMaxW($bp-container) {
       padding: 10px;
+      font-size: 12px;
     }
 
     &--docs {
@@ -162,6 +168,16 @@
   }
 
   .socials {
+    &__item {
+      &:not(:last-child) {
+        @include breakpointsMaxW($bp-container) {
+          margin-right: calc(7px + (10 - 7) * ((100vw - 991px) / (1300 - 991)));
+        }
+        @include breakpointsMaxW($bp-991) {
+          margin-right: 10px;
+        }
+      }
+    }
     &__link {
       @include breakpointsMaxW($bp-container) {
         width: 25px;

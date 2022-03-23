@@ -32,12 +32,22 @@
   }
 
   &__title {
-    @include adaptive-value('font-size', 35, 26, 1);
+    font-size: 35px;
     font-weight: 700;
     color: var(--color-dark);
     @include adaptive-value('margin-bottom', 25, 15, 1);
     line-height: 1.25;
     font-weight: 700;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1300 - 320)));
+    }
+    @include breakpointsMaxW(374px) {
+      font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (374 - 320)));
+    }
+    @include breakpointsMaxW(320px) {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -66,8 +76,25 @@
 
   &--apartments {
     .hero {
+      &__wrapper {
+        @include breakpointsMaxW($bp-container) {
+          padding-bottom: 400px;
+        }
+
+        @include breakpointsMaxW($bp-991) {
+          padding-top: calc(50px + (70 - 50) * ((100vw - 375px) / (991 - 375)));
+        }
+
+        @include breakpointsMaxW($bp-768) {
+          text-align: center;
+        }
+      }
       &__offer {
         max-width: 620px;
+
+        @include breakpointsMaxW($bp-768) {
+          margin: 0 auto;
+        }
       }
 
       &__title {
@@ -82,11 +109,17 @@
         max-width: 100%;
       }
 
+      &__btns {
+        @include breakpointsMaxW($bp-768) {
+          margin: 0 auto;
+          align-items: center;
+        }
+      }
+
       &__btn {
         font-size: 15px;
       }
     }
-    
   }
 
   &--mini-hotels {

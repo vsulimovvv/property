@@ -128,6 +128,7 @@
 
     @include breakpointsMaxW($bp-991) {
       margin-left: 0;
+      display: none;
     }
 
     @include breakpointsMaxW($bp-768) {
@@ -213,6 +214,39 @@
       &:active {
         fill: var(--color-accent);
       }
+    }
+  }
+}
+.actions-mobile {
+  background-color: var(--color-bg);
+  padding: 10px;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include breakpointsMaxW($bp-991) {
+    display: flex;
+  }
+
+  &__top {
+    width: 100%;
+    text-align-last: left;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__button {
+    font-size: 16px;
+    
+    &--active {
+      color: var(--color-accent);
     }
   }
 }

@@ -326,7 +326,7 @@ body {
 .side-mobile {
   display: none;
   background-color: var(--color-bg);
-  padding: 10px 0;
+  padding: 10px;
 
   @include breakpointsMaxW($bp-991) {
     display: block;
