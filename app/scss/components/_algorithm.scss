@@ -55,7 +55,6 @@
     transition: 150ms ease;
     padding: 50px;
     padding-top: 145px;
-    counter-reset: number;
 
     @include adaptive-value('padding', 50, 20, 1);
     @include adaptive-value('padding-top', 145, 125, 1);
